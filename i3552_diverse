@@ -1,0 +1,68 @@
+/sbin/insmod /lib/modules/3.14.24/extra/ict_watchdog/ict_watchdog.ko
+
+bootargs=console=ttyS0,115200n8 earlyprintk=1 hw_config_id=65535 init=/init
+Device UserInterface X_GETOUI_Cli Username operator
+Device UserInterface X_GETOUI_Cli Password $1$MqmfDyce$QnoE6w328yNIxUHzw6SuP/
+
+
+Device UserInterface X_GETOUI_Cli Username admin
+Device UserInterface X_GETOUI_Cli Password $1$s1QaVVQI$l4V0DkfNjnCWbfoMa1ugW0
+
+
+Valid FLT is found, ver 0, Jun 14 2021
+#####Using 4Byte access control
+appid   start           len             jffs2   ddescriptor
+  0     00001000        0001f000        0       uboot
+  1     00020000        00020000        0       uboot_slave1
+  2     00040000        00020000        0       uboot_slave2
+  3     00060000        00020000        0       uboot_env
+  7     00080000        00080000        1       cal_dat
+  5     00100000        01c80000        0       linux_safety
+  6     01d80000        01c80000        0       linux_live
+  8     03a00000        00500000        1       FON
+  9     03f00000        00100000        1       config
+pearl>printenv
+bootdelay=2
+bootfile=pearl-linux.lzma.img
+bootcmd=qtnboot
+loadaddr=0x83000000
+max_tx_power=25
+min_tx_power=7
+safety_image_addr=0x100000
+safety_image_size=0x1C80000
+live_image_addr=0x1D80000
+live_image_size=0x1C80000
+config_image_addr=0x3F00000
+config_image_size=0x100000
+fon_image_addr=0x3A00000
+fon_image_size=0x500000
+pciemac=00:26:86:F1:0F:D2
+hw_config_id=65535
+ext_lna_gain=15
+carrier_id=0
+fileaddr=0x83000000
+uboot_version=CL-37969
+ethact=QTN-EMAC0
+ethaddr=00:26:86:F0:63:47
+calstate=3
+upbm=tftp ${fileaddr} u-boot-master.bin; spi_flash unlock; spi_flash erase 0x1000 0x1F000; spi_flash write 0x1000 ${fileaddr} ${filesi}
+upb1=tftp ${fileaddr} u-boot-slave.bin; spi_flash unlock; spi_flash erase 0x20000 0x20000; spi_flash write 0x20000 ${fileaddr} ${files}
+upb2=tftp ${fileaddr} u-boot-slave.bin; spi_flash unlock; spi_flash erase 0x40000 0x20000; spi_flash write 0x40000 ${fileaddr} ${files}
+upe=tftp ${fileaddr} env.bin; spi_flash unlock; spi_flash erase 0x60000 0x20000; spi_flash write 0x60000 ${fileaddr} ${filesize}
+upcd=tftp ${fileaddr} cal_dat.bin; spi_flash unlock; spi_flash erase 0x80000 0x80000; spi_flash write 0x80000 ${fileaddr} ${filesize}
+upkfs1=tftp ${fileaddr} kfs.img; spi_flash unlock; spi_flash erase ${safety_image_addr} ${safety_image_size}; spi_flash write ${safety}
+upkfs2=tftp ${fileaddr} kfs.img; spi_flash unlock; spi_flash erase ${live_image_addr} ${live_image_size}; spi_flash write ${live_image}
+upc=tftp ${fileaddr} config.bin; spi_flash unlock; spi_flash erase ${config_image_addr} ${config_image_size}; spi_flash write ${config}
+upf=tftp ${fileaddr} fon.bin; spi_flash unlock; spi_flash erase ${fon_image_addr} ${fon_image_size}; spi_flash write ${fon_image_addr}}
+rf0_rc_calib.cal=cfg 0x00001153 0x0000000c
+rf1_rc_calib.cal=cfg 0x0000115f 0x0000000c
+rf2_rc_calib.cal=cfg 0x0000116b 0x0000000c
+gpio.bin=cfg 0x00001177 0x00000200
+qtn_hw_board_config.bin=cfg 0x00001377 0x0000012f
+config_data_end=0x000014a6
+stdin=serial
+stdout=serial
+stderr=serial
+bootargs=console=ttyS0,115200n8 earlyprintk=1 hw_config_id=65535 init=/init
+
+Environment size: 2194/98300 bytes

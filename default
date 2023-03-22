@@ -1,0 +1,318 @@
+### ACCESS ###
+
+Device ManagementServer EnableCWMP enable
+Device ManagementServer URL https://acs.bredband.com:7549/ACS-server/cpe
+Device ManagementServer ConnectionRequestUsername
+Device ManagementServer ConnectionRequestPassword
+Device ManagementServer PeriodicInformEnable enable
+Device ManagementServer PeriodicInformInterval 86400
+Device ManagementServer PeriodicInformTime 1970-01-01T00:00:00Z
+Device ManagementServer X_GETOUI_Port 8080
+Device ManagementServer X_GETOUI_Filter Enable enable
+Device ManagementServer X_GETOUI_Filter Rule 1 Enable enable
+Device ManagementServer X_GETOUI_Filter Rule 1 SrcIP 195.54.96.0
+Device ManagementServer X_GETOUI_Filter Rule 1 Action allow
+Device ManagementServer X_GETOUI_Filter Rule 1 SrcIPNetmask 255.255.224.0
+Device ManagementServer X_GETOUI_Filter Rule 2 Enable enable
+Device ManagementServer X_GETOUI_Filter Rule 2 SrcIP 213.150.128.0
+Device ManagementServer X_GETOUI_Filter Rule 2 Action allow
+Device ManagementServer X_GETOUI_Filter Rule 2 SrcIPNetmask 255.255.224.0
+Device ManagementServer X_GETOUI_Filter Rule 3 Enable enable
+Device ManagementServer X_GETOUI_Filter Rule 3 SrcIP 62.127.200.0
+Device ManagementServer X_GETOUI_Filter Rule 3 Action allow
+Device ManagementServer X_GETOUI_Filter Rule 3 SrcIPNetmask 255.255.255.0
+
+Device UserInterface X_GETOUI_Cli Username operator
+Device UserInterface X_GETOUI_Cli Password $1$MqmfDyce$QnoE6w328yNIxUHzw6SuP/
+Device UserInterface X_GETOUI_Cli Timeout 300
+Device UserInterface X_GETOUI_Cli SlaveNumber 0
+
+Device UserInterface X_GETOUI_Leds AutoOffTime 0
+
+Device UserInterface X_GETOUI_Telnet Enable disable
+Device UserInterface X_GETOUI_Telnet Port 23
+Device UserInterface X_GETOUI_Telnet Filter Enable enable
+Device UserInterface X_GETOUI_Telnet Filter Rule 1 Enable enable
+Device UserInterface X_GETOUI_Telnet Filter Rule 1 Action allow
+Device UserInterface X_GETOUI_Telnet Filter Rule 1 SrcIP 0.0.0.0
+
+Device UserInterface X_GETOUI_SerialConsole Port read-only
+
+Device UserInterface X_GETOUI_SSH Enable enable
+Device UserInterface X_GETOUI_SSH Port 22
+Device UserInterface X_GETOUI_SSH Filter Enable enable
+Device UserInterface X_GETOUI_SSH Filter Rule 1 Enable enable
+Device UserInterface X_GETOUI_SSH Filter Rule 1 InIf Device.IP.Interface.1
+Device UserInterface X_GETOUI_SSH Filter Rule 1 SrcIP 195.54.114.216
+Device UserInterface X_GETOUI_SSH Filter Rule 1 SrcIPNetmask 255.255.255.248
+Device UserInterface X_GETOUI_SSH Filter Rule 1 Action allow
+Device UserInterface X_GETOUI_SSH Filter Rule 2 Enable enable
+Device UserInterface X_GETOUI_SSH Filter Rule 2 InIf Device.IP.Interface.1
+Device UserInterface X_GETOUI_SSH Filter Rule 2 SrcIP 195.54.106.0
+Device UserInterface X_GETOUI_SSH Filter Rule 2 SrcIPNetmask 255.255.255.248
+Device UserInterface X_GETOUI_SSH Filter Rule 2 Action allow
+Device UserInterface X_GETOUI_SSH Filter Rule 3 Enable enable
+Device UserInterface X_GETOUI_SSH Filter Rule 3 InIf Device.IP.Interface.1
+Device UserInterface X_GETOUI_SSH Filter Rule 3 SrcIP 195.54.106.144
+Device UserInterface X_GETOUI_SSH Filter Rule 3 SrcIPNetmask 255.255.255.248
+Device UserInterface X_GETOUI_SSH Filter Rule 3 Action allow
+Device UserInterface X_GETOUI_SSH Filter Rule 4 Enable enable
+Device UserInterface X_GETOUI_SSH Filter Rule 4 InIf Device.IP.Interface.1
+Device UserInterface X_GETOUI_SSH Filter Rule 4 SrcIP 195.54.102.0
+Device UserInterface X_GETOUI_SSH Filter Rule 4 SrcIPNetmask 255.255.255.192
+Device UserInterface X_GETOUI_SSH Filter Rule 4 Action allow
+Device UserInterface X_GETOUI_SSH Filter Rule 5 Enable enable
+Device UserInterface X_GETOUI_SSH Filter Rule 5 InIf Device.IP.Interface.1
+Device UserInterface X_GETOUI_SSH Filter Rule 5 SrcIP 195.54.99.40
+Device UserInterface X_GETOUI_SSH Filter Rule 5 SrcIPNetmask 255.255.255.248
+Device UserInterface X_GETOUI_SSH Filter Rule 5 Action allow
+Device UserInterface X_GETOUI_SSH Filter Rule 15 Enable enable
+Device UserInterface X_GETOUI_SSH Filter Rule 15 SrcIP 81.18.219.96
+Device UserInterface X_GETOUI_SSH Filter Rule 15 SrcIPNetmask 255.255.255.224
+Device UserInterface X_GETOUI_SSH Filter Rule 15 Action allow
+Device UserInterface X_GETOUI_SSH Keys 1 Description TN root key
+Device UserInterface X_GETOUI_SSH Keys 1 Value ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA370bug+K5oebGBtlvEhM3rPQdZAGIMStUEppQTFnrGd9GjChW8klw/fHKICNJ7gD3dwOfCWg3Ju4K5BJzdXrF1435VTiZ0k34ZxFFCMEig7Aq7nGzoAU0qxooCYOA3LvdwJ6nD6a9Hf/izoPuyYPAEuV1Q1kMjRBPnPe7KOSnk9/E5t6c76iMh2S/pn1yehRSVwK5tjqPX5HPIaQO3R7ZzPR0IP+zSKttnSKiryg3nu/yezH1PKNh/tDEhyKsWKJiKMhjgrm2QLf3pL69lUXkyEvh7IouEJytlWu0GvNrJVpkXFWBhiHJiUbvjTZUrdB80o9jButYYsKaWSMU4U1nw== root@cosmos2fe01
+Device UserInterface X_GETOUI_SSH Keys 2 Description ICT support key
+Device UserInterface X_GETOUI_SSH Keys 2 Value ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbrtuCxo6BGJvOHQw8PB2KvruZhO0mCwQXzLkHVJmqZ4rylT+HXLmz0bu8Ikq1pVJhBBUkdNhF/nrcuMBuGP5HvpIGROnN7ErZDqfl1cd5rY+Gobpah26Bb8PXVeJ3IRdxUKsEWntUqFS3RuT2nN3senz0nsP6Qd2VYUWuvL4KNt72LePqPALnFbrk7DdsRVMRArJQqMfp29Ahlom1VxMi8MSYmF1Q4J4OCDKjypqYWVX9UnHYWKUNQ6l2pcFXdIEyyNvydOMeKvYm5TxWzmtQmv4oO3yteJcKZ2sIBEkQcbzhk+jVgXZhQtfqrhIRrVOHQZ/MMSmn97+LVysZdYSz
+
+Device UserInterface X_GETOUI_Syslog Enable disable
+Device UserInterface X_GETOUI_Syslog Level informational
+Device UserInterface X_GETOUI_Syslog Protocol tcp
+Device UserInterface X_GETOUI_Syslog Server logger.bredband.com
+Device UserInterface X_GETOUI_Syslog Port 6514
+Device UserInterface X_GETOUI_Syslog TlsEnable enable
+
+Device UserInterface X_GETOUI_Webui Enable disable
+
+Device WiFi AccessPoint 1 X_GETOUI_Airquota PersistentAirquota 1000
+Device WiFi AccessPoint 1 X_GETOUI_Airfair PersistentEnable enable
+Device WiFi AccessPoint 2 X_GETOUI_Airquota PersistentAirquota 1000
+Device WiFi AccessPoint 2 X_GETOUI_Airfair PersistentEnable enable
+Device WiFi AccessPoint 3 X_GETOUI_Airquota PersistentAirquota 1000
+Device WiFi AccessPoint 3 X_GETOUI_Airfair PersistentEnable enable
+Device WiFi AccessPoint 4 X_GETOUI_Airquota PersistentAirquota 1000
+Device WiFi AccessPoint 4 X_GETOUI_Airfair PersistentEnable enable
+Device WiFi AccessPoint 5 X_GETOUI_Airquota PersistentAirquota 1000
+Device WiFi AccessPoint 5 X_GETOUI_Airfair PersistentEnable enable
+Device WiFi AccessPoint 6 X_GETOUI_Airquota PersistentAirquota 1000
+Device WiFi AccessPoint 6 X_GETOUI_Airfair PersistentEnable enable
+Device WiFi AccessPoint 7 X_GETOUI_Airquota PersistentAirquota 1000
+Device WiFi AccessPoint 7 X_GETOUI_Airfair PersistentEnable enable
+Device WiFi AccessPoint 8 X_GETOUI_Airquota PersistentAirquota 1000
+Device WiFi AccessPoint 8 X_GETOUI_Airfair PersistentEnable enable
+
+Device X_GETOUI_Fon Disable disable
+
+<----variable_settings
+
+### SERVICES ###
+
+Device DHCPv4 Client 1 Enable enable
+Device DHCPv4 Client 1 Interface Device.IP.Interface.1
+
+Device DNS Client Enable enable
+Device DNS Client Server 1 Interface Device.IP.Interface.1
+Device DNS Client Server 2 Interface Device.IP.Interface.1
+
+Device Time Enable enable
+Device Time NTPServer1 ntp1.sth.netnod.se
+Device Time LocalTimeZone sweden
+
+Device XMPP Connection 1 Enable disable
+
+### ETHERNET ###
+
+### Wi-Fi MANAGEMENT BRIDGE ### 
+
+Device Bridging Bridge 1 Enable disable
+Device Bridging Bridge 1 Alias 
+Device Bridging Bridge 1 X_GETOUI_GuestNetwork disable
+Device Bridging Bridge 1 VLAN 1 Enable disable
+Device Bridging Bridge 1 VLAN 1 VLANID 1
+Device Bridging Bridge 1 VLAN 1 Name Management Network
+
+Device Bridging Bridge 1 Port 1 Enable enable
+Device Bridging Bridge 1 Port 1 AcceptableFrameTypes untagged
+Device Bridging Bridge 1 Port 1 LowerLayers Device.WiFi.EndPoint.1
+Device Bridging Bridge 1 Port 2 Enable enable
+Device Bridging Bridge 1 Port 2 AcceptableFrameTypes untagged
+Device Bridging Bridge 1 Port 2 LowerLayers Device.WiFi.SSID.7
+Device Bridging Bridge 1 Port 3 Enable disable
+Device Bridging Bridge 1 Port 4 Enable disable
+Device Bridging Bridge 1 Port 5 Enable disable
+Device Bridging Bridge 1 Port 6 Enable disable
+Device Bridging Bridge 1 Port 7 Enable disable
+Device Bridging Bridge 1 Port 8 Enable disable
+Device Bridging Bridge 1 Port 9 Enable disable
+Device Bridging Bridge 1 Port 10 Enable disable
+Device Bridging Bridge 1 Port 11 Enable disable
+
+### MAIN BRIDGE ###
+
+Device Bridging Bridge 2 Enable enable
+Device Bridging Bridge 2 Alias 
+Device Bridging Bridge 2 X_GETOUI_GuestNetwork disable
+Device Bridging Bridge 2 VLAN 1 Enable disable
+Device Bridging Bridge 2 VLAN 1 VLANID 2
+Device Bridging Bridge 2 VLAN 1 Name Main Network
+
+Device Bridging Bridge 2 Port 1 Enable enable
+Device Bridging Bridge 2 Port 1 AcceptableFrameTypes untagged
+Device Bridging Bridge 2 Port 1 LowerLayers Device.Ethernet.Interface.1
+Device Bridging Bridge 2 Port 2 Enable enable
+Device Bridging Bridge 2 Port 2 AcceptableFrameTypes untagged
+Device Bridging Bridge 2 Port 2 LowerLayers Device.Ethernet.Interface.2
+Device Bridging Bridge 2 Port 3 Enable enable
+Device Bridging Bridge 2 Port 3 AcceptableFrameTypes untagged
+Device Bridging Bridge 2 Port 3 LowerLayers Device.WiFi.SSID.1
+Device Bridging Bridge 2 Port 4 Enable enable
+Device Bridging Bridge 2 Port 4 AcceptableFrameTypes untagged
+Device Bridging Bridge 2 Port 4 LowerLayers Device.WiFi.SSID.5
+Device Bridging Bridge 2 Port 5 Enable enable
+Device Bridging Bridge 2 Port 5 AcceptableFrameTypes untagged
+Device Bridging Bridge 2 Port 5 LowerLayers Device.WiFi.EndPoint.1
+Device Bridging Bridge 2 Port 6 Enable disable
+Device Bridging Bridge 2 Port 7 Enable disable
+Device Bridging Bridge 2 Port 8 Enable disable
+Device Bridging Bridge 2 Port 9 Enable disable
+Device Bridging Bridge 2 Port 10 Enable disable
+Device Bridging Bridge 2 Port 11 Enable disable
+
+### GUEST BRIDGE ###
+
+Device Bridging Bridge 3 Enable disable
+Device Bridging Bridge 3 Alias 
+Device Bridging Bridge 3 X_GETOUI_GuestNetwork enable
+Device Bridging Bridge 3 VLAN 1 Enable enable
+Device Bridging Bridge 3 VLAN 1 VLANID 3
+Device Bridging Bridge 3 VLAN 1 Name Guest Network
+
+Device Bridging Bridge 3 Port 1 Enable enable
+Device Bridging Bridge 3 Port 1 AcceptableFrameTypes untagged
+Device Bridging Bridge 3 Port 1 LowerLayers Device.WiFi.SSID.2
+Device Bridging Bridge 3 Port 2 Enable enable
+Device Bridging Bridge 3 Port 2 AcceptableFrameTypes untagged
+Device Bridging Bridge 3 Port 2 LowerLayers Device.WiFi.SSID.6
+Device Bridging Bridge 3 Port 3 Enable enable
+Device Bridging Bridge 3 Port 3 AcceptableFrameTypes tagged
+Device Bridging Bridge 3 Port 3 LowerLayers Device.WiFi.EndPoint.1
+Device Bridging Bridge 3 Port 4 Enable disable
+Device Bridging Bridge 3 Port 5 Enable disable
+Device Bridging Bridge 3 Port 6 Enable disable
+Device Bridging Bridge 3 Port 7 Enable disable
+Device Bridging Bridge 3 Port 8 Enable disable
+Device Bridging Bridge 3 Port 9 Enable disable
+Device Bridging Bridge 3 Port 10 Enable disable
+Device Bridging Bridge 3 Port 11 Enable disable
+
+Device Ethernet Interface 1 Enable enable
+Device Ethernet Interface 1 MaxBitRate -1
+Device Ethernet Interface 1 Name LAN 1
+
+Device Ethernet Interface 2 Enable enable
+Device Ethernet Interface 2 MaxBitRate -1
+Device Ethernet Interface 2 Name LAN 2
+
+Device IP Interface 1 Enable enable
+Device IP Interface 1 LowerLayers Device.Bridging.Bridge.2
+Device IP Interface 1 IPv4Enable enable
+Device IP Interface 1 IPv4Address 1 Enable enable
+Device IP Interface 1 IPv4Address 1 AddressingType dhcp
+Device IP Interface 1 X_GETOUI_EchoReply enable
+
+Device IP Interface 2 Enable disable
+
+### WIRELESS ###
+
+Device WiFi AccessPoint 1 Enable enable
+Device WiFi AccessPoint 1 Alias Access_point
+Device WiFi AccessPoint 1 SSIDAdvertisementEnabled enable
+Device WiFi AccessPoint 1 WPS Enable enable
+Device WiFi AccessPoint 1 WPS ConfigMethodsEnabled VirtualPushButton,PhysicalPushButton
+Device WiFi AccessPoint 1 Security ModeEnabled wpa2
+Device WiFi AccessPoint 1 Security X_GETOUI_EncryptionMode aes
+Device WiFi AccessPoint 1 SSIDReference  Device.WiFi.SSID.1
+Device WiFi AccessPoint 1 Security KeyPassphrase ***default***
+
+Device WiFi AccessPoint 2 Enable disable
+Device WiFi AccessPoint 2 Alias Access_point
+Device WiFi AccessPoint 2 SSIDAdvertisementEnabled enable
+Device WiFi AccessPoint 2 WPS Enable disable
+Device WiFi AccessPoint 2 WPS ConfigMethodsEnabled VirtualPushButton,PhysicalPushButton
+Device WiFi AccessPoint 2 Security ModeEnabled wpa2
+Device WiFi AccessPoint 2 Security X_GETOUI_EncryptionMode aes
+Device WiFi AccessPoint 2 X_GETOUI_EnableIntraIsolation disable
+Device WiFi AccessPoint 2 X_GETOUI_EnableInterIsolation disable
+Device WiFi AccessPoint 2 SSIDReference  Device.WiFi.SSID.2
+Device WiFi AccessPoint 2 Security KeyPassphrase ***default***
+
+Device WiFi AccessPoint 5 Enable enable
+Device WiFi AccessPoint 5 Alias Access_point
+Device WiFi AccessPoint 5 SSIDAdvertisementEnabled enable
+Device WiFi AccessPoint 5 WPS Enable enable
+Device WiFi AccessPoint 5 WPS ConfigMethodsEnabled VirtualPushButton,PhysicalPushButton
+Device WiFi AccessPoint 5 Security ModeEnabled wpa2
+Device WiFi AccessPoint 5 Security X_GETOUI_EncryptionMode aes
+Device WiFi AccessPoint 5 SSIDReference Device.WiFi.SSID.5
+Device WiFi AccessPoint 5 Security KeyPassphrase ***default***
+
+Device WiFi AccessPoint 6 Enable disable
+Device WiFi AccessPoint 6 Alias Access_point
+Device WiFi AccessPoint 6 SSIDAdvertisementEnabled enable
+Device WiFi AccessPoint 6 WPS Enable disable
+Device WiFi AccessPoint 6 WPS ConfigMethodsEnabled VirtualPushButton,PhysicalPushButton
+Device WiFi AccessPoint 6 Security ModeEnabled wpa2
+Device WiFi AccessPoint 6 Security X_GETOUI_EncryptionMode aes
+Device WiFi AccessPoint 6 X_GETOUI_EnableIntraIsolation disable
+Device WiFi AccessPoint 6 X_GETOUI_EnableInterIsolation disable
+Device WiFi AccessPoint 6 SSIDReference Device.WiFi.SSID.6
+Device WiFi AccessPoint 6 Security KeyPassphrase ***default***
+
+Device WiFi Radio 1 Enable enable
+Device WiFi Radio 1 OperatingFrequencyBand 2.4GHz
+Device WiFi Radio 1 OperatingStandards g,n,ax
+Device WiFi Radio 1 AutoChannelEnable enable
+Device WiFi Radio 1 Channel 1
+Device WiFi Radio 1 OperatingChannelBandwidth 20MHz
+Device WiFi Radio 1 TransmitPower 100
+Device WiFi Radio 1 RTSThreshold 2347
+Device WiFi Radio 1 FragmentationThreshold 2346
+Device WiFi Radio 1 GuardInterval 400nsec
+Device WiFi Radio 1 X_GETOUI_DFSMode dfs-disabled
+Device WiFi Radio 1 RegulatoryDomain se
+
+Device WiFi Radio 2 Enable enable
+Device WiFi Radio 2 OperatingFrequencyBand 5GHz
+Device WiFi Radio 2 OperatingStandards a,n,ac,ax
+Device WiFi Radio 2 AutoChannelEnable enable
+Device WiFi Radio 2 Channel 36
+Device WiFi Radio 2 X_GETOUI_DFSMode dfs-full
+Device WiFi Radio 2 OperatingChannelBandwidth 80MHz
+Device WiFi Radio 2 TransmitPower 100
+Device WiFi Radio 2 RTSThreshold 2347
+Device WiFi Radio 2 FragmentationThreshold 2346
+Device WiFi Radio 2 GuardInterval 400nsec
+Device WiFi Radio 2 RegulatoryDomain se
+
+Device WiFi SSID 1 Enable enable
+Device WiFi SSID 1 SSID ***default_2.4***
+Device WiFi SSID 1 LowerLayers Device.WiFi.Radio.1
+
+Device WiFi SSID 2 Enable enable
+Device WiFi SSID 2 SSID ***default_2.4_guest***
+Device WiFi SSID 2 LowerLayers Device.WiFi.Radio.1
+
+Device WiFi SSID 5 Enable enable
+Device WiFi SSID 5 SSID ***default_5***
+Device WiFi SSID 5 LowerLayers Device.WiFi.Radio.2
+
+Device WiFi SSID 6 Enable enable
+Device WiFi SSID 6 SSID ***default_5_guest***
+Device WiFi SSID 6 LowerLayers Device.WiFi.Radio.2
+
+Device WiFi SSID 7 Enable enable
+Device WiFi SSID 7 SSID ***backhaul_default***
+Device WiFi SSID 7 LowerLayers Device.WiFi.Radio.2
+
+
+Device WiFi EndPoint 1 Enable enable
